@@ -1,4 +1,4 @@
-package com.example.userinformation
+package com.sevensol.userinformation
 
 import io.flutter.embedding.android.FlutterActivity
 

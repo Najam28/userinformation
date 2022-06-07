@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.userinformation">
+    package="com.sevensol.userinformation">
    <application
         android:label="userinformation"
         android:name="${applicationName}"
