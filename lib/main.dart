@@ -1,62 +1,37 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:userinformation/firebase_options.dart';
-import 'package:userinformation/view/verify_email_view.dart';
-import 'package:userinformation/view/login_view.dart';
-import 'package:userinformation/view/register_view.dart';
+import 'package:userinformation/screens/chat_screen.dart';
+import 'package:userinformation/screens/login_screen.dart';
+import 'package:userinformation/screens/registration_screen%20.dart';
+import 'package:userinformation/screens/welcome_screen.dart';
 
-void main() {
+import 'firebase_options.dart';
+
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(
-    MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      routes: {
-        "/login/": (context) => LoginVIew(),
-        "/register/": (context) => RegisterView(),
-      },
-      home: const HomePage(),
-    ),
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
   );
+  runApp(FlatChat());
 }
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class FlatChat extends StatelessWidget {
+  const FlatChat({super.key});
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-      future: Firebase.initializeApp(
-        options: DefaultFirebaseOptions.currentPlatform,
-      ),
-      builder: (context, snapshot) {
-        switch (snapshot.connectionState) {
-          case ConnectionState.done:
-            final user = FirebaseAuth.instance.currentUser;
-            if (user != null) {
-              if (user.emailVerified) {
-                print("Email Verify");
-              } else {
-                VerifyEmailView();
-              }
-            } else {
-              LoginVIew();
-            }
-            return Center(child: Text("Done"));
-          default:
-            return Center(
-              child: CircularProgressIndicator(),
-            );
-        }
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      // theme: ThemeData(
+      //   primarySwatch: Colors.blue,
+      // ),
+      initialRoute: WelcomeScreen.routeName,
+      routes: {
+        LoginScreen.routeName: (context) => LoginScreen(),
+        RegistrationScreen.routeName: (context) => RegistrationScreen(),
+        ChatScreen.routeName: (context) => ChatScreen(),
       },
+      home: WelcomeScreen(),
     );
   }
 }
