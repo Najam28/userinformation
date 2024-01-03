@@ -1,6 +1,6 @@
 {
-    "name": "userinformation",
-    "short_name": "userinformation",
+    "name": "mnhw_task_2",
+    "short_name": "mnhw_task_2",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

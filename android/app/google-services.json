@@ -1,36 +1,64 @@
 {
   "project_info": {
-    "project_number": "342370244150",
-    "project_id": "user-flutter-app",
-    "storage_bucket": "user-flutter-app.appspot.com"
+    "project_number": "603431232526",
+    "project_id": "user-management-6d841",
+    "storage_bucket": "user-management-6d841.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:342370244150:android:582f1e143dbeb4bdeaaa97",
+        "mobilesdk_app_id": "1:603431232526:android:dd55881d592e8ae5a7885f",
         "android_client_info": {
-          "package_name": "com.sevensol.userinformation"
+          "package_name": "com.example.data_success"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "342370244150-36ns0l64lsuk3o1asnjqc6mqb7mjja8m.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCpnlMO-s0gl3IKf663_-rUlCwXq4ZHM9o"
+          "current_key": "AIzaSyBbVj1qFucj-dZQdiuTNUZBT9a49gU9M_M"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "342370244150-36ns0l64lsuk3o1asnjqc6mqb7mjja8m.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603431232526:android:7e45afe973a619aaa7885f",
+        "android_client_info": {
+          "package_name": "com.example.mnhw_task_2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbVj1qFucj-dZQdiuTNUZBT9a49gU9M_M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603431232526:android:5b49484ffd49161ca7885f",
+        "android_client_info": {
+          "package_name": "com.techswivwel.mnhw_task_2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbVj1qFucj-dZQdiuTNUZBT9a49gU9M_M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
         }
       }
     }
